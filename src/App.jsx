@@ -312,6 +312,7 @@ function App() {
     textInput.current.value = "";
     setTextTraduit("");
     setNewAlphabet(alphabet);
+    setIsSaved(false);
   };
 
   return (
