@@ -216,7 +216,9 @@ function App() {
   useEffect(() => {
     let newAlphabetStore = localStorage.getItem("newAlphabet", newAlphabet);
     if (!newAlphabetStore) return;
+
     newAlphabetStore = newAlphabetStore.split(",");
+
     setNewAlphabet(newAlphabetStore);
   }, []);
 
@@ -267,7 +269,6 @@ function App() {
   // Save
   const handleSave = () => {
     localStorage.setItem("newAlphabet", newAlphabet);
-    localStorage.setItem("textTraduit", textTraduit);
     setIsSaved(true);
   };
 
