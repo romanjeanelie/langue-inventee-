@@ -235,7 +235,6 @@ function App() {
   };
 
   const handleChangeText = (e) => {
-    setIsSaved(false);
     setIsCopied(false);
 
     const text = textInput.current.value;
