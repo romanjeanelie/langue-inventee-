@@ -245,6 +245,7 @@ function App() {
     newAlphabetStore = newAlphabetStore.split(",");
 
     setNewAlphabet(newAlphabetStore);
+    setIsSaved(true);
   }, []);
 
   useEffect(() => {
