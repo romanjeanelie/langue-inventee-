@@ -96,11 +96,14 @@ const Main = styled.div`
           }
           .custom {
             text-align: center;
-            background-color: ${({ theme }) => theme.colors.lightBlack};
+            background-color: ${({ theme }) => theme.colors.mediumBlack};
             color: ${({ theme }) => theme.colors.white};
+            transition: background-color 300ms, border-color 300ms;
+
             &:focus {
               outline: none !important;
               border-color: ${({ theme }) => theme.colors.focusColor};
+              background-color: ${({ theme }) => theme.colors.lightBlack};
             }
           }
         }
@@ -153,6 +156,15 @@ const Main = styled.div`
         flex: 1;
         flex-shrink: 1;
         margin: 0 8px;
+
+        textarea {
+          background-color: ${({ theme }) => theme.colors.mediumBlack};
+          transition: background-color 300ms, border-color 500ms;
+
+          &:focus {
+            background-color: ${({ theme }) => theme.colors.lightBlack};
+          }
+        }
       }
       .output {
         flex: 1;
