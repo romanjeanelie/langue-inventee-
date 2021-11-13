@@ -211,14 +211,10 @@ function App() {
   const [isSaved, setIsSaved] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
+  // Load items
   useEffect(() => {
-    // Init new alphabet
-    alphabet.forEach((letter) => {
-      setNewAlphabet((state) => [...state, letter]);
-    });
-
-    // Load items
     let newAlphabetStore = localStorage.getItem("newAlphabet", newAlphabet);
+    if (!newAlphabetStore) return;
     newAlphabetStore = newAlphabetStore.split(",");
     setNewAlphabet(newAlphabetStore);
   }, []);
