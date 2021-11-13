@@ -184,6 +184,19 @@ const Main = styled.div`
       }
     }
   }
+
+  footer {
+    margin-top: 15px;
+    margin-left: 8px;
+    font-size: 12px;
+    opacity: 0.6;
+    a {
+      transition: color 400ms;
+      &:hover {
+        color: white;
+      }
+    }
+  }
 `;
 
 function App() {
@@ -397,6 +410,12 @@ function App() {
               </div>
             </div>
           </div>
+          <footer>
+            - développé par{" "}
+            <a href="https://romanjeanelie.com/" target="_blank">
+              Roman Jean-Elie
+            </a>
+          </footer>
         </div>
       </Main>
     </ThemeProvider>
