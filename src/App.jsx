@@ -67,7 +67,7 @@ const Main = styled.div`
     h1 {
       font-size: 20px;
       color: ${({ theme }) => theme.colors.white};
-      text-align: center;
+      text-align: left;
     }
 
     // Letters
@@ -305,7 +305,7 @@ function App() {
       <GlobalStyles />
       <Main>
         <div className="container">
-          <h1>Langue Inventée</h1>
+          <h1>Code • Langue Inventée</h1>
 
           <div className="letters-container">
             <h3>Lettres d'entrée</h3>
