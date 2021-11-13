@@ -160,6 +160,7 @@ const Main = styled.div`
 
         margin: 0 8px;
         .output-el {
+          color: lightgray;
           background-color: ${({ theme }) => theme.colors.black};
         }
       }
