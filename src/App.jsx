@@ -242,7 +242,7 @@ function App() {
     setIsSaved(false);
 
     const index = parseInt(e.target.dataset.index);
-    const value = e.target.value;
+    const value = e.target.value.toLowerCase();
     setNewAlphabet((letters) => letters.map((letter, i) => (i === index ? value : letter)));
   };
 
