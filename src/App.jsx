@@ -251,10 +251,14 @@ function App() {
     arrText.forEach((letter) => {
       let newLetter = null;
       const letterWithBreakLine = letter.charCodeAt() === 10 ? "BREAKLINE" : letter;
+
       const indexOriginLetter = alphabet.indexOf(letterWithBreakLine);
+      const indexOriginLetterMaj = alphabet.indexOf(letterWithBreakLine.toLowerCase());
 
       if (newAlphabet[indexOriginLetter]) {
         newLetter = newAlphabet[indexOriginLetter];
+      } else if (newAlphabet[indexOriginLetterMaj]) {
+        newLetter = newAlphabet[indexOriginLetterMaj].toUpperCase();
       } else if (letterWithBreakLine === "BREAKLINE") {
         newLetter = "\r\n";
       } else {
